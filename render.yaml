@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: mentis-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    region: oregon
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: MONGODB_URL
+        fromDatabase:
+          name: mentis-db
+          property: connectionString
+    healthCheckPath: /api/v1/users/health
+    autoDeploy: true
+
+databases:
+  - name: mentis-db
+    plan: free
+    databaseName: SmartAttendence

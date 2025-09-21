@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartAttend - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-section" onclick="scrollToTop()">
+                <img src="./assets/images/logowebblue.png" alt="Mentis Logo" class="logo">
+                <div class="logo-text">
+                    <h1>Mentis</h1>
+                    <p>Smart Attendance System</p>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="login-pill" id="login-pill">Login / Signup</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="abstract-lines"></div>
+            <div class="floating-icons">
+                <div class="floating-icon" data-icon="💻">💻</div>
+                <div class="floating-icon" data-icon="📱">📱</div>
+                <div class="floating-icon" data-icon="🌐">🌐</div>
+                <div class="floating-icon" data-icon="⚡">⚡</div>
+                <div class="floating-icon" data-icon="🔒">🔒</div>
+                <div class="floating-icon" data-icon="🚀">🚀</div>
+                <div class="floating-icon" data-icon="💡">💡</div>
+                <div class="floating-icon" data-icon="🔧">🔧</div>
+                <div class="floating-icon" data-icon="📊">📊</div>
+                <div class="floating-icon" data-icon="📈">📈</div>
+            </div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Smart Attendance.<br>
+                        <span class="highlight">Smarter Learning.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Geo-location powered attendance and real-time timetable generation in one platform.
+                    </p>
+
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📍</div>
+                            <div class="highlight-text">
+                                <h3>Location-based Attendance</h3>
+                                <p>10m geo-fence</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📅</div>
+                            <div class="highlight-text">
+                                <h3>Collision-Free Timetables</h3>
+                                <p>Instant Generation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="login-card" id="login">
+                        <div class="logo-container">
+                            <img src="./assets/images/logo.png" alt="University Logo">
+                        </div>
+
+                        <div class="tabs">
+                            <button id="login-tab" class="tab active">
+                                Login
+                            </button>
+                            <button id="signup-tab" class="tab inactive">
+                                Sign Up
+                            </button>
+                        </div>
+                        <div id="form-container">
+                            <form id="login-form" novalidate>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <div class="input-wrapper">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                            </svg>
+                                        </div>
+                                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                                    </div>
+                                    <p class="error-message" id="login-email-error"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <div class="input-wrapper">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <input type="password" id="login-password" value="••••••••" required>
+                                        <div class="icon right-icon toggle-password">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="error-message" id="login-password-error"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="login-role">Role</label>
+                                    <div class="input-wrapper">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="9" cy="7" r="4"></circle>
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                            </svg>
+                                        </div>
+                                        <select id="login-role" required>
+                                            <option value="student">Student</option>
+                                            <option value="teacher">Teacher</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
+                                    </div>
+                                    <p class="error-message" id="login-role-error"></p>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="submit-button">
+                                        Sign In
+                                    </button>
+                                </div>
+                            </form>
+                            <form id="signup-form" style="display: none;" novalidate>
+                                <div class="form-group">
+                                    <label for="fullname">Full Name</label>
+                                    <div class="input-wrapper">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="12" cy="7" r="4"></circle>
+                                            </svg>
+                                        </div>
+                                        <input type="text" id="fullname" placeholder="Full Name" required>
+                                    </div>
+                                    <p class="error-message" id="fullname-error"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="signup-email">Email Address</label>
+                                    <div class="input-wrapper">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                            </svg>
+                                        </div>
+                                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                                    </div>
+                                    <p class="error-message" id="signup-email-error"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="signup-password">Password</label>
+                                    <div class="input-wrapper">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <input type="password" id="signup-password" placeholder="••••••••" required>
+                                        <div class="icon right-icon toggle-password">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="error-message" id="signup-password-error"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="signup-role">Role</label>
+                                    <div class="input-wrapper">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="9" cy="7" r="4"></circle>
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                            </svg>
+                                        </div>
+                                        <select id="signup-role" required>
+                                            <option value="student">Student</option>
+                                            <option value="teacher">Teacher</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
+                                    </div>
+                                    <p class="error-message" id="signup-role-error"></p>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="submit-button">
+                                        Sign Up
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Additional sections will go here -->
+    </main>
+    <!-- Footer -->
+    <footer id="footer" style="position: relative; bottom:15px;">
+        <span>&copy; 2025 BluePixels All rights reserved.</span>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

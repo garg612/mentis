@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - MyCollege</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./css/student.css?v=26.0">
+</head>
+
+<body>
+
+    <!-- Background System - Added without affecting functionality -->
+    <div class="hero-background">
+        <div class="gradient-overlay"></div>
+        <div class="abstract-lines"></div>
+        <div class="floating-icons">
+            <div class="floating-icon" data-icon="💻">💻</div>
+            <div class="floating-icon" data-icon="📱">📱</div>
+            <div class="floating-icon" data-icon="🌐">🌐</div>
+            <div class="floating-icon" data-icon="⚡">⚡</div>
+            <div class="floating-icon" data-icon="🔒">🔒</div>
+            <div class="floating-icon" data-icon="🚀">🚀</div>
+            <div class="floating-icon" data-icon="💡">💡</div>
+            <div class="floating-icon" data-icon="🔧">🔧</div>
+            <div class="floating-icon" data-icon="📊">📊</div>
+            <div class="floating-icon" data-icon="📈">📈</div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="assets/images/logowebblue.png" alt="College Logo" class="college-logo">
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="nav-link active" data-target="profile">Profile</a></li>
+                <li><a href="#" class="nav-link" data-target="attendance">Attendance</a></li>
+                <li><a href="#" class="nav-link" data-target="ai-mentor">AI Mentor</a></li>
+                <li><a href="#" class="nav-link" data-target="timetable">Timetable</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="logout-btn">Logout</a>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Student Profile Section -->
+        <section id="profile" class="content-section active">
+            <!-- New Descriptive Student Summary Card -->
+            <div class="descriptive-summary-card">
+                <img id="summary-avatar" src="" alt="Student Avatar" class="summary-avatar">
+                <div class="summary-info-block">
+                    <div class="student-name">Loading...</div>
+                    <div class="university-name">Silver Oak University</div>
+                    <div class="academic-details">Semester - 3 | 2024-2028</div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="profile-actions">
+                <a href="#" class="card-action-btn" id="change-password-btn">Change Password</a>
+                <a href="#" class="card-action-btn">Upload Avatar</a>
+            </div>
+
+            <!-- Profile Details Container -->
+            <div class="profile-details-container">
+                <!-- Profile Photo Column -->
+                <div class="profile-details-avatar-col">
+                    <div class="main-profile-photo-container">
+                        <img id="main-profile-photo" src="" alt="Profile Photo" class="main-profile-photo">
+                    </div>
+                </div>
+
+                <!-- Profile Information Column -->
+                <div class="profile-details-info-col">
+                    <div class="profile-info-header">
+                        <h3>Student Information</h3>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="info-category">
+                        <h4>Personal Information</h4>
+                        <div class="profile-details-grid">
+                            <div class="detail-row">
+                                <span class="detail-label">Full Name:</span>
+                                <span class="detail-value">Loading...</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Father's Name:</span>
+                                <span class="detail-value">Rajesh Kumar</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Mother's Name:</span>
+                                <span class="detail-value">Sunita Kumar</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Date of Birth:</span>
+                                <span class="detail-value">01 January 2004</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Gender:</span>
+                                <span class="detail-value">Male</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="info-category">
+                        <h4>Contact Information</h4>
+                        <div class="profile-details-grid">
+                            <div class="detail-row">
+                                <span class="detail-label">Email:</span>
+                                <span class="detail-value">priyanshu.k@silveroak.edu</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Phone:</span>
+                                <span class="detail-value">+91 12345 67890</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Address:</span>
+                                <span class="detail-value">123 Tech Park, Silicon Valley, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <div class="info-category">
+                        <h4>Academic Information</h4>
+                        <div class="profile-details-grid">
+                            <div class="detail-row">
+                                <span class="detail-label">Roll Number:</span>
+                                <span class="detail-value">Loading...</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Program:</span>
+                                <span class="detail-value">Bachelor of Technology</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Department:</span>
+                                <span class="detail-value">Computer Science & Engineering</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Academic Session:</span>
+                                <span class="detail-value">2024-2028</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Batch No:</span>
+                                <span class="detail-value">A-04</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Current Semester:</span>
+                                <span class="detail-value">3rd Semester</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attendance Section -->
+        <section id="attendance" class="content-section">
+
+
+            <!-- Charts and Calendar Container -->
+            <div class="charts-container">
+                <div class="card chart-card">
+                    <div class="chart-header">
+                        <h3 class="section-title">Subject-wise Attendance</h3>
+                        <div class="chart-controls">
+                            <button class="chart-toggle-btn active" data-chart="bar">Bar</button>
+                            <button class="chart-toggle-btn" data-chart="line">Line</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="subject-attendance-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <h3 class="section-title">Overall Attendance</h3>
+                    <div class="doughnut-chart-container">
+                        <canvas id="overall-attendance-chart"></canvas>
+                    </div>
+                    <div class="chart-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">Overall Percentage:</span>
+                            <span class="summary-value primary" id="overall-percentage">0%</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Classes Present:</span>
+                            <span class="summary-value" id="overall-present">0/0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Status:</span>
+                            <span class="summary-value warning" id="overall-status">No data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Absentee Record -->
+            <div class="card">
+                <div class="table-header">
+                    <div class="table-title-section">
+                        <h3 class="section-title">Absentee Record</h3>
+                        <div class="record-summary">
+                            <span class="record-count" id="absent-count">0 absent days</span>
+                            <span class="record-period">Current Semester</span>
+                        </div>
+                    </div>
+                    <div class="table-controls">
+                        <div class="table-filter">
+                            <label for="subject-filter">Subject:</label>
+                            <select id="subject-filter">
+                                <option value="">All Subjects</option>
+                            </select>
+                        </div>
+                        <div class="table-filter">
+                            <label for="date-filter">Month:</label>
+                            <select id="date-filter">
+                                <option value="">All Months</option>
+                                <option value="2025-01">January 2025</option>
+                                <option value="2025-02">February 2025</option>
+                                <option value="2025-03">March 2025</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table id="absentee-table" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Date</th>
+                                <th>Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- AI Mentor Section -->
+        <section id="ai-mentor" class="content-section">
+            <!-- AI Mentor Summary Card -->
+            <div class="ai-mentor-summary-card">
+                <div class="summary-header">
+                    <div class="summary-header-left">
+                        <div class="ai-mentor-avatar">
+                            <div class="avatar-icon">🚀</div>
+                        </div>
+                        <div class="summary-title">
+                            <h3>Your Learning Journey</h3>
+                            <p>Unlock your potential with personalized AI guidance</p>
+                        </div>
+                    </div>
+                    <div class="form-controls">
+                        <button class="edit-btn" id="edit-profile-btn">Edit Profile</button>
+                        <button class="save-btn" id="save-profile-btn" disabled>Save Changes</button>
+                        <div class="restriction-info" id="restriction-info" style="display: none;">
+                            <span class="restriction-text">Complete more quizzes to unlock editing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summary-content">
+                    <div class="profile-field-card">
+                        <div class="field-header">
+                            <span class="field-icon">🎯</span>
+                            <span class="field-label">Career Goal</span>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="career-goal" name="career-goal" placeholder="Enter your career goal"
+                                disabled>
+                            <span class="summary-value" id="summary-career-goal">Not set</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-field-card">
+                        <div class="field-header">
+                            <span class="field-icon">📚</span>
+                            <span class="field-label">Weak Subject</span>
+                        </div>
+                        <div class="input-container">
+                            <select id="weak-subject" name="weak-subject" disabled>
+                                <option value="">Select subject</option>
+                                <option value="python">Python Programming</option>
+                                <option value="dbms">Database Management</option>
+                                <option value="dsa">Data Structures & Algorithms</option>
+                                <option value="web-dev">Web Development</option>
+                                <option value="ml">Machine Learning</option>
+                                <option value="networking">Computer Networks</option>
+                                <option value="os">Operating Systems</option>
+                                <option value="se">Software Engineering</option>
+                            </select>
+                            <span class="summary-value" id="summary-weak-subject">Not set</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-field-card">
+                        <div class="field-header">
+                            <span class="field-icon">💡</span>
+                            <span class="field-label">Skill Focus</span>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="skill" name="skill" placeholder="Enter your skill focus" disabled>
+                            <span class="summary-value" id="summary-skill">Not set</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-field-card">
+                        <div class="field-header">
+                            <span class="field-icon">💬</span>
+                            <span class="field-label">Communication Level</span>
+                        </div>
+                        <div class="input-container">
+                            <select id="communication-level" name="communication-level" disabled>
+                                <option value="">Select level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="expert">Expert</option>
+                            </select>
+                            <span class="summary-value" id="summary-communication">Not set</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Mentor Interaction Section -->
+            <div class="ai-mentor-interaction">
+                <!-- Chat History Sidebar -->
+                <div class="chat-history-sidebar" id="chat-history-sidebar">
+                    <div class="sidebar-header">
+                        <h4>Chat History</h4>
+                        <button class="sidebar-toggle" id="sidebar-toggle">
+                            <span class="toggle-icon">←</span>
+                        </button>
+                    </div>
+                    <div class="current-chat-section">
+                        <button class="current-chat-btn" id="current-chat-btn">
+                            <span class="current-chat-icon">💬</span>
+                            <span class="current-chat-text">Current Chat</span>
+                        </button>
+                    </div>
+                    <div class="history-list" id="history-list">
+                        <!-- Chat history will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- AI Chat Interface (65% width) -->
+                <div class="ai-chat-container">
+                    <div class="chat-header">
+                        <div class="ai-avatar">
+                            <div class="avatar-icon">🤖</div>
+                            <div class="status-indicator offline" id="status-indicator"></div>
+                        </div>
+                        <div class="ai-info">
+                            <h3>AI Mentor</h3>
+                            <p id="status-text">Click to start conversation</p>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="action-btn" id="history-toggle-btn" title="Chat History">
+                                <span>📋</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>Hello! I'm your AI Mentor. Click on me to start our conversation!</p>
+                                <span class="message-time">Just now</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Typing indicator will be added as a message -->
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <input type="text" id="chat-input" placeholder="Click on AI Mentor to start chatting..."
+                                maxlength="500" disabled>
+                            <button class="send-btn" id="send-btn" disabled>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22,2 15,22 11,13 2,9"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Task Suggester (35% width) -->
+                <div class="ai-task-suggester">
+                    <div class="task-header">
+                        <h3>Recommended Tasks</h3>
+                        <button class="refresh-tasks-btn" id="refresh-tasks-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="23,4 23,10 17,10"></polyline>
+                                <polyline points="1,20 1,14 7,14"></polyline>
+                                <path d="M20.49,9A9,9,0,0,0,5.64,5.64L1,10m22,4L18.36,18.36A9,9,0,0,1,3.51,15"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="task-list" id="task-list">
+                        <!-- Tasks will be dynamically loaded and grouped by time slots -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div class="quiz-section" id="quiz-section">
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-header-content">
+                            <div class="quiz-icon">🧠</div>
+                            <div class="quiz-title-section">
+                                <h3>Daily Knowledge Assessment</h3>
+                                <p>Test your knowledge across different areas</p>
+                            </div>
+                        </div>
+                        <div class="quiz-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Career Goals</span>
+                                <span class="stat-percentage">40%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Academic</span>
+                                <span class="stat-percentage">30%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Skills</span>
+                                <span class="stat-percentage">20%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Communication</span>
+                                <span class="stat-percentage">10%</span>
+                            </div>
+                        </div>
+                        <button class="quiz-btn start-quiz-btn" id="start-quiz-btn">
+                            <span class="btn-icon">🚀</span>
+                            <span class="btn-text">Start Assessment</span>
+                        </button>
+                    </div>
+                    <div class="quiz-content" id="quiz-content" style="display: none;">
+                        <div class="quiz-progress-section">
+                            <div class="progress-header">
+                                <span class="progress-text">
+                                    Question <span id="current-question">1</span> of <span
+                                        id="total-questions">10</span>
+                                </span>
+                                <span class="question-type" id="question-type">Career Goals</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="question-container">
+                            <div class="question-header">
+                                <div class="question-number">Q<span id="question-number">1</span></div>
+                                <div class="question-type-badge" id="question-type-badge">Career Goals</div>
+                            </div>
+                            <h4 id="question-text">Loading question...</h4>
+                            <div class="quiz-options" id="quiz-options">
+                                <!-- Options will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="quiz-navigation">
+                            <button class="quiz-btn prev-btn" id="prev-btn" disabled>
+                                <span class="btn-icon">←</span>
+                                <span class="btn-text">Previous</span>
+                            </button>
+                            <button class="quiz-btn next-btn" id="next-btn" disabled>
+                                <span class="btn-text">Next</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            <button class="quiz-btn submit-btn" id="submit-btn" style="display: none;">
+                                <span class="btn-icon">✓</span>
+                                <span class="btn-text">Submit Assessment</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="quiz-results" id="quiz-results" style="display: none;">
+                        <div class="results-header">
+                            <div class="results-icon">🎯</div>
+                            <h3>Assessment Complete!</h3>
+                            <div class="score-display">
+                                <div class="score-circle">
+                                    <span class="score-percentage" id="score-percentage">0%</span>
+                                </div>
+                                <div class="score-details">
+                                    <span class="score">You scored <span id="final-score">0</span>/<span
+                                            id="max-score">10</span></span>
+                                    <span class="score-status" id="score-status">Keep improving!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- All Questions Results -->
+                        <div class="all-questions-results">
+                            <h4 class="section-title">Question Review</h4>
+                            <div class="questions-list" id="questions-list">
+                                <!-- All questions will be populated here -->
+                            </div>
+                        </div>
+
+                        <div class="results-message">
+                            <div class="message-icon">📅</div>
+                            <div class="message-content">
+                                <h4>Great job on today's assessment!</h4>
+                                <p>Come back tomorrow for a fresh set of questions to continue your learning journey.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="quiz-btn close-results-btn" id="close-results-btn">
+                                <span class="btn-icon">✓</span>
+                                <span class="btn-text">Close</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Report Section -->
+            <div class="progress-report-section" id="progress-report-section">
+                <div class="progress-report-card">
+                    <div class="progress-header">
+                        <div class="progress-title">
+                            <h3>Weekly Progress Report</h3>
+                            <p>Track your learning journey across all areas</p>
+                        </div>
+                        <div class="overall-progress">
+                            <div class="overall-percentage" id="overall-percentage">0%</div>
+                            <div class="overall-status" id="overall-status">Not Started</div>
+                        </div>
+                    </div>
+                    <div class="category-cards">
+                        <div class="category-card" data-category="career">
+                            <div class="category-header">
+                                <div class="category-icon">🎯</div>
+                                <div class="category-title">Career Goals</div>
+                            </div>
+                            <div class="category-chart">
+                                <canvas id="careerChart"></canvas>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-row">
+                                    <span class="stat-label">Correct</span>
+                                    <span class="stat-value correct" id="career-correct">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Incorrect</span>
+                                    <span class="stat-value incorrect" id="career-incorrect">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Total</span>
+                                    <span class="stat-value total" id="career-total">0</span>
+                                </div>
+                                <div class="category-percentage" id="career-percentage">0%</div>
+                            </div>
+                        </div>
+
+                        <div class="category-card" data-category="academic">
+                            <div class="category-header">
+                                <div class="category-icon">📚</div>
+                                <div class="category-title">Academic</div>
+                            </div>
+                            <div class="category-chart">
+                                <canvas id="academicChart"></canvas>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-row">
+                                    <span class="stat-label">Correct</span>
+                                    <span class="stat-value correct" id="academic-correct">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Incorrect</span>
+                                    <span class="stat-value incorrect" id="academic-incorrect">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Total</span>
+                                    <span class="stat-value total" id="academic-total">0</span>
+                                </div>
+                                <div class="category-percentage" id="academic-percentage">0%</div>
+                            </div>
+                        </div>
+
+                        <div class="category-card" data-category="skill">
+                            <div class="category-header">
+                                <div class="category-icon">⚡</div>
+                                <div class="category-title">Skills</div>
+                            </div>
+                            <div class="category-chart">
+                                <canvas id="skillChart"></canvas>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-row">
+                                    <span class="stat-label">Correct</span>
+                                    <span class="stat-value correct" id="skill-correct">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Incorrect</span>
+                                    <span class="stat-value incorrect" id="skill-incorrect">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Total</span>
+                                    <span class="stat-value total" id="skill-total">0</span>
+                                </div>
+                                <div class="category-percentage" id="skill-percentage">0%</div>
+                            </div>
+                        </div>
+
+                        <div class="category-card" data-category="communication">
+                            <div class="category-header">
+                                <div class="category-icon">💬</div>
+                                <div class="category-title">Communication</div>
+                            </div>
+                            <div class="category-chart">
+                                <canvas id="communicationChart"></canvas>
+                            </div>
+                            <div class="category-stats">
+                                <div class="stat-row">
+                                    <span class="stat-label">Correct</span>
+                                    <span class="stat-value correct" id="communication-correct">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Incorrect</span>
+                                    <span class="stat-value incorrect" id="communication-incorrect">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Total</span>
+                                    <span class="stat-value total" id="communication-total">0</span>
+                                </div>
+                                <div class="category-percentage" id="communication-percentage">0%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="motivational-message" id="motivational-message">
+                        <div class="message-icon">💪</div>
+                        <div class="message-content">
+                            <h4>Keep Going!</h4>
+                            <p>Start taking quizzes to see your progress and unlock your potential.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timetable Section -->
+        <section id="timetable" class="content-section">
+            <div class="card">
+                <h3 class="section-title">Today's Timetable</h3>
+                <ul class="timetable-list">
+                    <!-- Timetable items will be loaded dynamically from backend -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Change Password Modal -->
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-btn">&times;</span>
+            <form id="password-change-form" class="modal-form">
+                <h3>Change Password</h3>
+                <div class="form-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm New Password</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit" class="modal-btn">Update Password</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notification-toast"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/student.js"></script>
+</body>
+
+</html>
