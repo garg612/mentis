@@ -2,7 +2,7 @@ import { Timetable } from "../models/timetable.models.js";
 import { Teacher } from "../models/teacher.models.js";
 import dayjs from "dayjs";
 import { Apierror } from "../utils/Apierror.js";
-import { Apiresponse } from "../utils/ApiResponse.js";
+import { Apiresponse } from "../utils/Apiresponse.js";
 
 const getteachertimetable = async (req, res) => {
     try {
